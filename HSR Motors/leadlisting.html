@@ -3,50 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead Listing | LeadPro CRM</title>
+    <title>LeadPro CRM</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>LeadPro CRM - Lead Listing</h1>
-    </header>
-    <main>
-        <section>
-            <h2>All Leads</h2>
+    <div class="container">
+        <!-- Lead Listing -->
+        <div class="section" id="lead-listing">
+            <h2>LeadPro - Lead Listing</h2>
             <div class="filters">
-                <label for="status">Filter by Status:</label>
-                <select id="status">
-                    <option value="all">All</option>
-                    <option value="new">New</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="not_interested">Not Interested</option>
+                <input type="text" placeholder="Search leads..." />
+                <select>
+                    <option>Status</option>
                 </select>
-                <input type="text" id="search" placeholder="Search by name or contact">
+                <select>
+                    <option>Source</option>
+                </select>
             </div>
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Contact</th>
-                        <th>Status</th>
                         <th>Source</th>
-                        <th>Assigned To</th>
-                        <th>Actions</th>
+                        <th>Status</th>
+                        <th>Last Contact</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>+1-123-456-7890</td>
-                        <td>New</td>
-                        <td>Facebook</td>
-                        <td>Jane Smith</td>
-                        <td><button>Edit</button> <button>Delete</button></td>
-                    </tr>
-                    <!-- Add more rows dynamically -->
+                    <!-- Rows dynamically added -->
                 </tbody>
             </table>
-        </section>
-    </main>
+        </div>
+
+        <!-- Lead Details -->
+        <div class="section" id="lead-details">
+            <h3>Lead Details</h3>
+            <div class="details">
+                <p><strong>John Doe</strong></p>
+                <p>Phone: +1 234 567 8900</p>
+                <p>Email: john@example.com</p>
+            </div>
+            <h4>Status Timeline</h4>
+            <ul class="timeline">
+                <li><span class="dot green"></span> New Lead Created</li>
+                <li><span class="dot blue"></span> First Contact Made</li>
+                <li><span class="dot orange"></span> Follow-up Scheduled</li>
+            </ul>
+        </div>
+
+        <!-- Lead Management -->
+        <div class="section" id="lead-management">
+            <h3>Lead Management</h3>
+            <div class="manage">
+                <div>
+                    <h4>Update Status</h4>
+                    <select>
+                        <option>Select Status</option>
+                    </select>
+                </div>
+                <div>
+                    <h4>Add Notes</h4>
+                    <textarea placeholder="Add your notes here..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="section" id="dashboard">
+            <h3>Dashboard</h3>
+            <div class="stats">
+                <div>
+                    <h4>Total Leads</h4>
+                    <p>1,234</p>
+                </div>
+                <div>
+                    <h4>Conversion Rate</h4>
+                    <p>23.5%</p>
+                </div>
+            </div>
+            <div>
+                <h4>Lead Sources</h4>
+                <p>Graph or details here...</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
