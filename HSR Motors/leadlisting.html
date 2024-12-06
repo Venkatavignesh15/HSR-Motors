@@ -9,17 +9,93 @@
 <body>
     <div class="container">
         <!-- Lead Listing -->
-        <div class="section" id="lead-listing">
-            <h2>LeadPro - Lead Listing</h2>
-            <div class="filters">
-                <input type="text" placeholder="Search leads..." />
-                <select>
-                    <option>Status</option>
-                </select>
-                <select>
-                    <option>Source</option>
-                </select>
-            </div>
+ <div class="container">
+        <header class="header">
+    <h1>Lead Listing</h1>
+    <div class="header-controls">
+        <input type="text" id="search-input" placeholder="Search leads..." class="search-input">
+        <select id="status-filter" class="filter-btn">
+            <option value="all">All</option>
+            <option value="new">New</option>
+            <option value="contacted">Contacted</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+        </select>
+        <button class="dashboard-btn">View Dashboard</button>
+    </div>
+</header>
+
+<main class="table-container">
+    <table id="leads-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Last Contact</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-status="new">
+                <td>John Doe</td>
+                <td>Facebook</td>
+                <td><span class="badge new">New</span></td>
+                <td>2024-10-24</td>
+                <td><button class="action-btn">View Details</button></td>
+            </tr>
+            <tr data-status="contacted">
+                <td>Jane Smith</td>
+                <td>Google</td>
+                <td><span class="badge contacted">Contacted</span></td>
+                <td>2024-10-23</td>
+                <td><button class="action-btn">View Details</button></td>
+            </tr>
+            <tr data-status="qualified">
+                <td>Bob Wilson</td>
+                <td>Website</td>
+                <td><span class="badge qualified">Qualified</span></td>
+                <td>2024-10-22</td>
+                <td><button class="action-btn">View Details</button></td>
+            </tr>
+            <tr data-status="proposal">
+                <td>Alice Brown</td>
+                <td>Twitter</td>
+                <td><span class="badge proposal">Proposal</span></td>
+                <td>2024-10-21</td>
+                <td><button class="action-btn">View Details</button></td>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                        <td>Facebook</td>
+                        <td><span class="badge new">New</span></td>
+                        <td>2024-10-24</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Google</td>
+                        <td><span class="badge contacted">Contacted</span></td>
+                        <td>2024-10-23</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Wilson</td>
+                        <td>Website</td>
+                        <td><span class="badge qualified">Qualified</span></td>
+                        <td>2024-10-22</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Alice Brown</td>
+                        <td>Twitter</td>
+                        <td><span class="badge proposal">Proposal</span></td>
+                        <td>2024-10-21</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+        </tbody>
+    </table>
+        </div>
             <table>
                 <thead>
                     <tr>
