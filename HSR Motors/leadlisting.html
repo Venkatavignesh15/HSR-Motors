@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Listing | LeadPro CRM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LeadPro CRM - Lead Listing</h1>
+    </header>
+    <main>
+        <section>
+            <h2>All Leads</h2>
+            <div class="filters">
+                <label for="status">Filter by Status:</label>
+                <select id="status">
+                    <option value="all">All</option>
+                    <option value="new">New</option>
+                    <option value="contacted">Contacted</option>
+                    <option value="not_interested">Not Interested</option>
+                </select>
+                <input type="text" id="search" placeholder="Search by name or contact">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Status</th>
+                        <th>Source</th>
+                        <th>Assigned To</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>+1-123-456-7890</td>
+                        <td>New</td>
+                        <td>Facebook</td>
+                        <td>Jane Smith</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <!-- Add more rows dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
