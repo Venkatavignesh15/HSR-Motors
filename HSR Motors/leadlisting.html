@@ -3,50 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead Listing | LeadPro CRM</title>
+    <title>Lead Listing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>LeadPro CRM - Lead Listing</h1>
-    </header>
-    <main>
-        <section>
-            <h2>All Leads</h2>
-            <div class="filters">
-                <label for="status">Filter by Status:</label>
-                <select id="status">
-                    <option value="all">All</option>
-                    <option value="new">New</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="not_interested">Not Interested</option>
-                </select>
-                <input type="text" id="search" placeholder="Search by name or contact">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Lead Listing</h1>
+            <div class="header-controls">
+                <input type="text" placeholder="Search leads..." class="search-input">
+                <button class="filter-btn">Filter</button>
+                <button class="dashboard-btn">View Dashboard</button>
             </div>
+        </header>
+
+        <!-- Table Section -->
+        <main class="table-container">
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Contact</th>
-                        <th>Status</th>
                         <th>Source</th>
-                        <th>Assigned To</th>
+                        <th>Status</th>
+                        <th>Last Contact</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>John Doe</td>
-                        <td>+1-123-456-7890</td>
-                        <td>New</td>
                         <td>Facebook</td>
-                        <td>Jane Smith</td>
-                        <td><button>Edit</button> <button>Delete</button></td>
+                        <td><span class="badge new">New</span></td>
+                        <td>2024-10-24</td>
+                        <td><button class="action-btn">View Details</button></td>
                     </tr>
-                    <!-- Add more rows dynamically -->
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Google</td>
+                        <td><span class="badge contacted">Contacted</span></td>
+                        <td>2024-10-23</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Wilson</td>
+                        <td>Website</td>
+                        <td><span class="badge qualified">Qualified</span></td>
+                        <td>2024-10-22</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Alice Brown</td>
+                        <td>Twitter</td>
+                        <td><span class="badge proposal">Proposal</span></td>
+                        <td>2024-10-21</td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
                 </tbody>
             </table>
-        </section>
-    </main>
+        </main>
+    </div>
 </body>
 </html>
